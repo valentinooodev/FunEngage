@@ -123,7 +123,7 @@ class Image_Paths(BaseModel):
                                                           related_name='img_path_related')
     file_name = models.CharField(max_length=255)
     dir_path = models.CharField(max_length=255)
-    image_url = models.CharField(max_length=255)
+    image_url = models.CharField(max_length=255, null=True)
     display_order = models.SmallIntegerField()
 
     def __str__(self):
